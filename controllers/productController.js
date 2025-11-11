@@ -12,7 +12,12 @@ const getProductsById = (req,res)=>{
 }
 
 const postProduct = (req,res)=>{
-    res.send("Adding a new product");
+    //res.send("Adding a new product");
+
+    //now we use req.body:-  data sent by the client in the body of http request
+    const data = req.body;
+    console.log(data);
+    res.json({value:data.productName})
 };
 
 const putProduct = (req,res)=>{
